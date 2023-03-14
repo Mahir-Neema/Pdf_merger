@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://cdn.pixabay.com/photo/2014/05/26/09/48/icon-354357_1280.png">
+    <title>PDF Merger</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+        *{
+            list-style: none;
+            text-decoration: none;
+            color: white;
+            /* color: aquamarine; */
+            font-family: 'Poor Story';
+            font-size: 1.5rem;
+              /* background: rgb(40, 37, 53); */
+        }
+
+        body{
+            background: rgb(41, 44, 55);
+        }
+        .tc{
+            text-align: center;
+        }
+
+        header{
+            width: 100%;
+            height: 60px;
+            background: #c1bfbf30;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .nav-bar ul{
+            display: flex;
+            padding-left: 35px;
+        }
+        .nav-bar ul li a{
+            display: block;
+            font-size: 18px;
+            padding: 5px 11px;
+            color: white;
+        }
+
+        .nav-bar ul li a:hover{
+            cursor: pointer;
+            background: rgb(240, 178, 9);
+            transition: 0.2s ease-in-out;
+            /* border-radius: 0 4px 0 4px; */
+        }
+
+
+        .dsp_b{
+            display: block;
+            margin-top: 1.5rem;
+        }
+        .temporary{
+            font-size: 2.5rem;
+            margin-top: 15px;
+        }
+        .input_file{
+            margin: 1.5rem; 
+            padding-top: 27px;
+            padding-bottom: 27px;
+            padding-left: 13vw;
+            border: white dashed 5px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .Submit-btn{
+            margin: 3px;
+            padding: 5px;
+            background-color: rgb(240, 178, 9);
+            border: none;
+            color: black;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .github_des{
+            margin-top: 0.8vw;
+            margin-left: 80vw;
+        }
+        .down_left{
+            margin-top: 100px;
+        }
+
+
+        @media only screen and (max-width: 855px) {
+            *{
+                font-size: 1rem;
+            }
+            .Submit-btn{
+                font-size: 1.5rem;
+            }
+            .github_des{
+                color:rgba(41, 44, 55, 0)
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="https://github.com/Mahir-Neema" target="_blank">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/mahir-neema-55b66319a/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://mahir-neema.github.io/Project_page/index.html" target="_blank">Other Projects</a></li>     
+                   
+                </ul>
+            </nav>
+        </header>
+
+
+        <div class="temporary tc">PDF Merger</div>
+        <form method="post" action="/merge" enctype="multipart/form-data">
+            <div class="form-upload tc">
+                <label for="uploadFile1"  class="dsp_b"> Upload File</label>
+                <input type="file" name="pdfs" id="uploadFile1" class="input_file" multiple accept=".pdf">
+                <div class="tc">Browse or Drag the files</div>
+                <br>
+                <input type="submit" value="Submit" class="Submit-btn">
+            </div>
+        </form>
+
+        <div class="down_left">
+            <a href="https://github.com/Mahir-Neema/Pdf_merger.git" target="_blank" class="github_des">Github Repo</a>
+        </div>
+</body>
+</html>
